@@ -14,11 +14,11 @@
             <h3>(Definición de parámetros)</h3>
         </div>
         <div id="cont-inputs">
-            <label class="labels" id="cant-slides">Cantidad total de Slides a Mostrar</label>
+            <label class="labels" id="cant-slides">Total de Slides a Mostrar (Dflt: 20)</label>
             <input class="inputs" id="nro-slides" type="number">
-            <label class="labels" id="sld-vent">Cantidad de Slides en la Ventana</label>
+            <label class="labels" id="sld-vent">Nro de Slides en Ventana (Dflt: 4)</label>
             <input class="inputs" id="nro-en-vent" type="number"> 
-            <label class="labels" id="ancho-vent">Ancho de Ventana [px] (dflt:1200px)</label>
+            <label class="labels" id="ancho-vent">Ancho de Ventana [px] (Dflt: 1200)</label>
             <input class="inputs" id="ancho-de-vent" type="number"> 
             <div id="cont-bot-gen">
                 <button id= "bot-genera" onclick="generaCarousel()">Genera Carousel</button>
@@ -35,13 +35,15 @@
             .... insertar los carousel elem...
             </div> --->
         </div>
-        <div class="carousel-boton1 left" onclick="carouselDesliza(-1)">&#60;</div>
-        <div class="carousel-boton1 right" onclick="carouselDesliza(1)">&#62;</div>
-        <div class="carousel-boton2 left" onclick="carouselDesliza(-2)">&#171;</div>
-        <div class="carousel-boton2 right" onclick="carouselDesliza(2)">&#187;</div>
-        <div class="carousel-boton3 right" onclick="carouselContinuo()">&#8734;</div>
-        <div class="carousel-boton4 right" onclick="carouselStop()">&#9632;</div>
-    </div>
+        <div id="botones-control">
+            <div class="b-control carousel-boton1 left" onclick="carouselDesliza(-1)">&#60;</div>
+            <div class="b-control carousel-boton1 right" onclick="carouselDesliza(1)">&#62;</div>
+            <div class="b-control carousel-boton2 left" onclick="carouselDesliza(-2)">&#171;</div>
+            <div class="b-control carousel-boton2 right" onclick="carouselDesliza(2)">&#187;</div>
+            <div class="b-control carousel-boton3 right" onclick="carouselContinuo()">&#8734;</div>
+            <div class="b-control carousel-boton4 right" onclick="carouselStop()">&#9632;</div>
+        </div>
+        </div>
     <script src="manejo.js"></script>
 </body>
 </html>

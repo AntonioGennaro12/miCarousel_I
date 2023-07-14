@@ -4,6 +4,8 @@
 const miBody            = document.querySelector("body");
 // Datos del slider
 const   carouEncabezado = document.querySelector("#encabezado");
+// Cont de Inputs
+const contImputs        = document.querySelector("#cont-inputs");
 // Label Nro de slides
 const   levCantSlides   = document.querySelector("#cant-slides");
 // Input Nro de slides
@@ -49,16 +51,20 @@ const   MAX_SLIDES_VEN  = 10;
 const   MIN_ANCHO_VEN   = 400;
 const   MAX_ANCHO_VEN   = 2000;
 
-let nroTotalSlides      = 0;
-let nroSlidesVent       = 0;
+let nroTotalSlides      = 20;
+let nroSlidesVent       = 4;
 let anchoDeVentana      = 1200;
-
-miBody.style.backgroundImage = "url("+IMG_BODY+")";
-
-carouselSlds.innerHTML = "";
-
 let contCarou   = 0;
 
+/* INICIALIZACIONES */
+
+miBody.style.backgroundImage = "url("+IMG_BODY+")";
+carouselSlds.innerHTML = "";
+
+/* Carga valores de default */
+inNumSlides.value = nroTotalSlides;
+inSldVent.value   = nroSlidesVent; 
+inAnchoVent.value = anchoDeVentana;
 
 /**
  * Lee los inputs de cantidad de slides, slides por ventana  ancho de ventana.
@@ -129,6 +135,7 @@ function generaCarousel() {
  * @param {number} direccion 
  */
 function carouselDesliza(direccion) {
+    contImputs.style.display = "none";
     const carouselElem = document.querySelectorAll('.carousel-elem');
     const itemWidth = anchoDeVentana / nroSlidesVent; //const itemWidth = carouselElem[0].offsetWidth; // No usado
     console.log("itWi:"+itemWidth);
@@ -197,6 +204,7 @@ function carouselContinuo() {
  * Detiene el deslizamiento Continuo
  */  
 function carouselStop() {
+  contImputs.style.display = "flex";
   clearInterval(intervalo);
 }
 

@@ -10,9 +10,12 @@ body {
     align-items: center;
 }
 #encabezado {
-    background-color: rgb(114, 177, 205);
+    background-color: transparent;
+    /*background: linear-gradient(#9edde864, #6c86b5);*/
+    /*background-color: rgb(114, 177, 205);*/
     width: 1200px;  /* valor de Default */ 
     border: solid 2px rgb(186, 38, 38);
+    box-shadow: 0 35px 35px rgba(114, 84, 84, 0.8);
 }
 #titulo {
     border: solid 2px rgb(186, 38, 38);
@@ -21,6 +24,7 @@ body {
     text-align: center;
 }
 h1, h3 {
+    color: rgb(0, 0, 2);
     margin-top: 0.1em;
     margin-bottom: 0.1em;
 }
@@ -68,6 +72,7 @@ h1, h3 {
     overflow: hidden;
     position: relative;
     margin-top: 3%;
+    box-shadow: 0 50px 50px rgba(114, 84, 84, 0.8);
 }
    
 .carousel-slides {
@@ -95,57 +100,41 @@ img {
     width: 100%;
     height: auto;
 }
-  
-.carousel-boton1 {
+
+
+#botones-control {
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Alinear verticalmente los botones */
+    justify-content: space-between; /* Espaciado uniforme entre los botones */
+    color: #ff0000;
+}
+.b-control {
     position: absolute;
-    top: 33%;
     transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
+    width: 1.6%;
+    height: 16%;
     background-color: #ccc;
-    color: #fff;
-    text-align: center;
-    line-height: 14px;
-    cursor: pointer;
+    display: flex;
+    align-items: center; /* Alinea verticalmente el texto */
+    justify-content: center; /* Alinea horizontalmente el texto */
+    border: none; /* Quita los bordes */
+    /*cursor: pointer;*/
+}
+.carousel-boton1 {
+    top: 33%;
 }
 
 .carousel-boton2 {
-    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
-    background-color: #ccc;
-    color: #fff;
-    text-align: center;
-    line-height: 13px;
-    cursor: pointer;
 }
 
 .carousel-boton3 {
-    position: absolute;
     top: 67%;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
-    background-color: #ccc;
-    color: #fff;
-    text-align: center;
-    line-height: 15px;
-    cursor: pointer;
 }
  
 .carousel-boton4 {
-    position: absolute;
     top: 84%;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
-    background-color: #ccc;
-    color: #fff;
-    text-align: center;
-    line-height: 20px;
-    cursor: pointer;
 }
 .carousel-boton1.left, .carousel-boton2.left {
     left: 0px;
